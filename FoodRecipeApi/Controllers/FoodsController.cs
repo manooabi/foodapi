@@ -16,7 +16,7 @@ namespace FoodRecipeApi.Controllers
             _Ifoods = Ifoods;
         }
         // GET: api/Users>
-        [Authorize]
+       
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Foods>>> Get()
         {
