@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodRecipeApi", "FoodRecipeApi\FoodRecipeApi.csproj", "{CEE671EA-636C-44B5-90B0-F1E09FE97EBE}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{55D50AFC-5C5F-4543-A281-AA3029400247}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEE671EA-636C-44B5-90B0-F1E09FE97EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEE671EA-636C-44B5-90B0-F1E09FE97EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEE671EA-636C-44B5-90B0-F1E09FE97EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEE671EA-636C-44B5-90B0-F1E09FE97EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D50AFC-5C5F-4543-A281-AA3029400247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D50AFC-5C5F-4543-A281-AA3029400247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D50AFC-5C5F-4543-A281-AA3029400247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D50AFC-5C5F-4543-A281-AA3029400247}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4BF65AF-408A-4E2F-9FDC-039F730FB806}
+	EndGlobalSection
+EndGlobal
