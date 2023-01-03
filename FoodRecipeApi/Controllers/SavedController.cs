@@ -21,6 +21,7 @@ namespace FoodRecipeApi.Controllers
         {
             return await Task.FromResult(_ISaved.GetSavedDetails());
         }
+       
         [HttpPost]
         public async Task<ActionResult<Saved>> Post(Saved saved)
         {
@@ -47,6 +48,23 @@ namespace FoodRecipeApi.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError,
                     "Error retrieving data from the database");
             }
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Saved>> GetSavedDetail(int id)
+        {
+            var saved = await Task.FromResult(_ISaved.GetSavedDetail(id));
+            if (saved == null)
+            {
+                return NotFound();
+            }
+            return saved;
+        }
+        // DELETE api/employee/5
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Saved>> Delete(int id)
+        {
+            var employee = _ISaved.DeleteSaved(id);
+            return await Task.FromResult(employee);
         }
     }
 }

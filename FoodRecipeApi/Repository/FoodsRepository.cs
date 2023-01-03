@@ -52,7 +52,20 @@ namespace FoodRecipeApi.Repository
 
             return await query.ToListAsync();
         }
+        public async Task<IEnumerable<Foods>> SearchbyFoodName(string name)
+        {
+            IQueryable<Foods> query = _dbContext.Foods;
 
+            if (!string.IsNullOrEmpty(name))
+            {
+                query = query.Where(e => e.FoodName.Contains(name)
+                            );
+            }
+
+
+
+            return await query.ToListAsync();
+        }
         public Foods GetFoodDetail(int id)
         {
             try

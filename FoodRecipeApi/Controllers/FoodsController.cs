@@ -69,6 +69,26 @@ namespace FoodRecipeApi.Controllers
                     "Error retrieving data from the database");
             }
         }
+        [HttpGet("[action]/{search}")]
+        public async Task<ActionResult<IEnumerable<Foods>>> SearchbyFoodName(string name)
+        {
+            try
+            {
+                var result = await _Ifoods.SearchbyFoodName(name);
+
+                if (result.Any())
+                {
+                    return Ok(result);
+                }
+
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error retrieving data from the database");
+            }
+        }
         // GET api/employee/5
         [HttpGet("{id}")]
          public async Task<ActionResult<Foods>> Get(int id)

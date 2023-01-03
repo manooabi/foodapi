@@ -73,6 +73,29 @@ namespace FoodRecipeApi.Repository
                 throw;
             }
         }
+        public Saved DeleteSaved(int id)
+        {
+            try
+            {
+                Saved? saved = _dbContext.Saved.Find(id);
+
+                if (saved != null)
+                {
+                    _dbContext.Saved.Remove(saved);
+                    _dbContext.SaveChanges();
+                    return saved;
+                }
+                else
+                {
+                    throw new ArgumentNullException();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
     }
     
 }

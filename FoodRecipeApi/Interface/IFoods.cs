@@ -11,6 +11,8 @@ namespace FoodRecipeApi.Interface
         Task<IEnumerable<Foods>> SearchbyCateogory(string name);
 
         Task<IEnumerable<Foods>> SearchbyType(string name);
+
+        Task<IEnumerable<Foods>> SearchbyFoodName(string name);
         public void UpdateFood(Foods food);
         public Foods DeleteFood(int id);
     }

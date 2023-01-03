@@ -9,6 +9,8 @@ namespace FoodRecipeApi.Interface
 
 
         Task<IEnumerable<Saved>> Searchbyid(int id);
+
+        public Saved DeleteSaved(int id);
         public void AddSaved(Saved saved);
 
     }
