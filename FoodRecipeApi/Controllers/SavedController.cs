@@ -63,8 +63,8 @@ namespace FoodRecipeApi.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Saved>> Delete(int id)
         {
-            var employee = _ISaved.DeleteSaved(id);
-            return await Task.FromResult(employee);
+            var saved = _ISaved.DeleteSaved(id);
+            return await Task.FromResult(saved);
         }
     }
 }

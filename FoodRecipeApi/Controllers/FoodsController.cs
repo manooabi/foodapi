@@ -93,12 +93,12 @@ namespace FoodRecipeApi.Controllers
         [HttpGet("{id}")]
          public async Task<ActionResult<Foods>> Get(int id)
          {
-             var employees = await Task.FromResult(_Ifoods.GetFoodDetail(id));
-             if (employees == null)
+             var foods = await Task.FromResult(_Ifoods.GetFoodDetail(id));
+             if (foods == null)
              {
                  return NotFound();
              }
-             return employees;
+             return foods;
          }
     }
 }
