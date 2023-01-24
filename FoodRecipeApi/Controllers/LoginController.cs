@@ -53,7 +53,7 @@ namespace FoodRecipeApi.Controllers
                   // return Ok(new JwtSecurityTokenHandler().WriteToken(token));
 
                     var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
-                    return Ok(new JWTTokenResponse { Token = tokenString });
+                    return Ok(new JWTTokenResponse { Token = tokenString, UserId = user.UserId });
                 }
                 else
                 {
