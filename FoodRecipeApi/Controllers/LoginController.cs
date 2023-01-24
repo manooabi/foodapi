@@ -23,7 +23,7 @@ namespace FoodRecipeApi.Controllers
             _context = context;
         }
         [HttpPost]
-        public async Task<IActionResult> Post(Users _userData)
+        public async Task<IActionResult> Post([FromBody] Users _userData)
         {
             if (_userData != null && _userData.Email != null && _userData.Password != null)
             {
@@ -50,7 +50,10 @@ namespace FoodRecipeApi.Controllers
                         expires: DateTime.UtcNow.AddMinutes(10),
                         signingCredentials: signIn);
 
-                    return Ok(new JwtSecurityTokenHandler().WriteToken(token));
+                  // return Ok(new JwtSecurityTokenHandler().WriteToken(token));
+
+                    var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+                    return Ok(new JWTTokenResponse { Token = tokenString });
                 }
                 else
                 {
